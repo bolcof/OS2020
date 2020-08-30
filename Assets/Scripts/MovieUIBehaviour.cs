@@ -2,36 +2,52 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class MovieUIBehaviour : MonoBehaviour
 {
-    public float triggerDistance, ExitDistance;
-    public float MaxDistance, MuteDistance;
+    public float triggerDistance, exitDistance;
 
-    public bool isPlaying;
+    public bool isPlaying, isReady;
+    public float playTime;
 
     public GameObject PlayerObj;
+    public VideoPlayer VplayerObj;
+    public RawImage Rimg;
 
     void Update()
     {
         float dist = Vector3.Distance(this.transform.position, PlayerObj.transform.position);
 
-        if (!isPlaying)
+        if (!isPlaying && isReady)
         {
             if (dist < triggerDistance)
             {
+                Rimg.enabled = true;
                 isPlaying = true;
-                this.gameObject.GetComponent<VideoPlayer>().time = 0.0f;
-                this.gameObject.GetComponent<VideoPlayer>().Play();
+                isReady = false;
+                playTime = 0.0f;
+                VplayerObj.time = 0.0f;
+                VplayerObj.Play();
+                PlayerObj.GetComponent<MoveScript>().isActive = false;
             }
         }
         else
         {
-            if (dist > ExitDistance)
+            playTime += Time.deltaTime;
+            if (playTime >= 15.0f)
             {
+                Rimg.enabled = false;
                 isPlaying = false;
-                this.gameObject.GetComponent<VideoPlayer>().Stop();
+                VplayerObj.Stop();
+                VplayerObj.time = 0.0f;
+                PlayerObj.GetComponent<MoveScript>().isActive = true;
             }
+        }
+
+        if(dist > exitDistance)
+        {
+            isReady = true;
         }
     }
 }

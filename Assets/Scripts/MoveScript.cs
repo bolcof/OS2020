@@ -29,4 +29,20 @@ public class MoveScript : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if(other.gameObject.name == "PlaneArea")
+        {
+            this.transform.gameObject.transform.rotation = other.transform.rotation;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.name == "PlaneArea")
+        {
+            this.transform.gameObject.transform.rotation = Quaternion.identity;
+        }
+    }
 }

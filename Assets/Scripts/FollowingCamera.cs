@@ -9,6 +9,5 @@ public class FollowingCamera : MonoBehaviour
     void Update()
     {
         this.transform.rotation = PlayerObj.transform.rotation;
-        Debug.Log(this.transform.rotation);
     }
 }

@@ -8,7 +8,7 @@ public class MovieUIBehaviour : MonoBehaviour
 {
     public float triggerDistance, exitDistance;
 
-    public bool isPlaying, isReady;
+    public bool isPlaying, isReady, isBroken;
     public float playTime;
 
     public GameObject PlayerObj;
@@ -16,6 +16,8 @@ public class MovieUIBehaviour : MonoBehaviour
 
     public RawImage Rimg;
     public Button closebtn;
+
+    public GameObject before, after;
 
     void Update()
     {
@@ -47,13 +49,7 @@ public class MovieUIBehaviour : MonoBehaviour
             playTime += Time.deltaTime;
             if (playTime >= 15.0f)
             {
-                Debug.Log("end");
-                Rimg.enabled = false;
-                closebtn.gameObject.SetActive(false);
-                isPlaying = false;
-                VplayerObj.Stop();
-                VplayerObj.time = 0.0f;
-                PlayerObj.GetComponent<MoveScript>().isActive = true;
+                close();
             }
         }
     }
@@ -67,5 +63,10 @@ public class MovieUIBehaviour : MonoBehaviour
         VplayerObj.Stop();
         VplayerObj.time = 0.0f;
         PlayerObj.GetComponent<MoveScript>().isActive = true;
+        playTime = 0.0f;
+
+        isBroken = true;
+        after.SetActive(true);
+        before.SetActive(false);
     }
 }

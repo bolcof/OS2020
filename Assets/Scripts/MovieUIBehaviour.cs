@@ -47,7 +47,7 @@ public class MovieUIBehaviour : MonoBehaviour
         else
         {
             playTime += Time.deltaTime;
-            if (playTime >= 15.0f)
+            if (playTime >= 165.0f)
             {
                 close();
             }

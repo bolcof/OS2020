@@ -21,11 +21,11 @@ public class MoveScript : MonoBehaviour
             }
             if (Input.GetKey("right") || Input.GetKey(KeyCode.D))
             {
-                Ground.transform.Rotate(new Vector3(0.0f, -0.8f, 0.0f), Space.World);
+                Ground.transform.Rotate(new Vector3(0.0f, -1.4f, 0.0f), Space.World);
             }
             if (Input.GetKey("left") || Input.GetKey(KeyCode.A))
             {
-                Ground.transform.Rotate(new Vector3(0.0f, 0.8f, 0.0f), Space.World);
+                Ground.transform.Rotate(new Vector3(0.0f, 1.4f, 0.0f), Space.World);
             }
         }
     }

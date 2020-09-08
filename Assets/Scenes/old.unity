@@ -2744,7 +2744,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   scrollNow: 0
   max: 2.5
-  endPos: {x: 0, y: 101, z: 0}
+  endPos: {x: 0, y: 102, z: 0}
   endRotate: {x: 1, y: 180, z: 0}
   endFoV: 35
 --- !u!1 &997883572
@@ -4304,6 +4304,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: after2fbx
+      objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0f5e16ea06667b143ba543012950112d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f5e16ea06667b143ba543012950112d, type: 3}

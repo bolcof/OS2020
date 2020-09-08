@@ -7,6 +7,7 @@ TagManager:
   - Fire
   - Front
   - Back
+  - wall
   layers:
   - Default
   - TransparentFX

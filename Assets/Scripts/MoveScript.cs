@@ -6,6 +6,7 @@ public class MoveScript : MonoBehaviour
 {
     public GameObject Ground;
     public bool isActive;
+    public bool lockFront = false, lockBack = false;
 
     void Update()
     {
@@ -13,11 +14,15 @@ public class MoveScript : MonoBehaviour
         {
             if (Input.GetKey("up") || Input.GetKey(KeyCode.W))
             {
-                Ground.transform.Rotate(new Vector3(0.4f, 0.0f, 0.0f), Space.World);
+                if (!lockFront) {
+                    Ground.transform.Rotate(new Vector3(0.4f, 0.0f, 0.0f), Space.World);
+                }
             }
             if (Input.GetKey("down") || Input.GetKey(KeyCode.S))
             {
-                Ground.transform.Rotate(new Vector3(-0.4f, 0.0f, 0.0f), Space.World);
+                if (!lockBack) {
+                    Ground.transform.Rotate(new Vector3(-0.4f, 0.0f, 0.0f), Space.World);
+                }
             }
             if (Input.GetKey("right") || Input.GetKey(KeyCode.D))
             {

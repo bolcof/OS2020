@@ -389,7 +389,7 @@ PrefabInstance:
     - target: {fileID: 7207863478568951258, guid: 2a7439d58dcb2f34cbbe7ae518343c87,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7207863478568951258, guid: 2a7439d58dcb2f34cbbe7ae518343c87,
         type: 3}
@@ -409,7 +409,7 @@ PrefabInstance:
     - target: {fileID: 7207863478568951258, guid: 2a7439d58dcb2f34cbbe7ae518343c87,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: -7.545467
+      value: 7.545467
       objectReference: {fileID: 0}
     - target: {fileID: 7207863478568951258, guid: 2a7439d58dcb2f34cbbe7ae518343c87,
         type: 3}
@@ -428,6 +428,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a7439d58dcb2f34cbbe7ae518343c87, type: 3}
+--- !u!1 &61752263 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7207863478568951256, guid: 2a7439d58dcb2f34cbbe7ae518343c87,
+    type: 3}
+  m_PrefabInstance: {fileID: 61752262}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &154855874
 GameObject:
   m_ObjectHideFlags: 0
@@ -729,7 +735,7 @@ GameObject:
   - component: {fileID: 275210017}
   m_Layer: 0
   m_Name: Left
-  m_TagString: Untagged
+  m_TagString: left
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5248,6 +5254,51 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 3
+--- !u!1 &1907164581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907164582}
+  - component: {fileID: 1907164584}
+  m_Layer: 0
+  m_Name: BookHud
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907164582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907164581}
+  m_LocalRotation: {x: 0.03634432, y: -0.0000000014689605, z: 0.000000011157857, w: 0.99933934}
+  m_LocalPosition: {x: -0.40075463, y: -0.581501, z: -12.728205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2053100928}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1907164584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907164581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38c9b4fa85219040bd96b90d058a3b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BookObject: {fileID: 61752263}
+  nowPage: 0
 --- !u!1 &1932605336
 GameObject:
   m_ObjectHideFlags: 0
@@ -5582,7 +5633,7 @@ GameObject:
   - component: {fileID: 2042240276}
   m_Layer: 0
   m_Name: Right
-  m_TagString: Untagged
+  m_TagString: right
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5670,6 +5721,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2053100928}
+  - component: {fileID: 2053100929}
   m_Layer: 0
   m_Name: Matsui
   m_TagString: Untagged
@@ -5690,10 +5742,25 @@ Transform:
   m_Children:
   - {fileID: 2042240275}
   - {fileID: 275210016}
+  - {fileID: 1907164582}
   - {fileID: 793362901}
   m_Father: {fileID: 259823782}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -79.166, y: 0, z: 0}
+--- !u!114 &2053100929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2053100927}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47a1f054a35a81e4388fbdfabb35108b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bookRoot: {fileID: 61752263}
+  nowPage: 0
 --- !u!1 &2071746170
 GameObject:
   m_ObjectHideFlags: 0

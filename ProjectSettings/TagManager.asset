@@ -8,6 +8,8 @@ TagManager:
   - Front
   - Back
   - wall
+  - left
+  - right
   layers:
   - Default
   - TransparentFX

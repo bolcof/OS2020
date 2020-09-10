@@ -19,7 +19,9 @@ public class MovieUIBehaviour : MonoBehaviour
 
     public GameObject before, after;
 
-    void Update()
+    
+
+        void Update()
     {
         float dist = Vector3.Distance(this.transform.position, PlayerObj.transform.position);
 
@@ -36,6 +38,8 @@ public class MovieUIBehaviour : MonoBehaviour
                 Debug.Log("start");
                 Rimg.enabled = true;
                 closebtn.gameObject.SetActive(true);
+
+      
                 isPlaying = true;
                 isReady = false;
                 playTime = 0.0f;

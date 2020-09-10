@@ -7,8 +7,11 @@ namespace eWolf.BookEffectV2
     {
         public GameObject BookObject;
         private IBookControl _bookControl;
+        GameObject clickedGameObject;
+        public int nowPage = 0;
+        public AudioSource page1, page3;
 
-        public void OnGUI()
+ /*       public void OnGUI()
         {
             if (_bookControl.IsBookOpen)
             {
@@ -64,11 +67,75 @@ namespace eWolf.BookEffectV2
             {
                 _bookControl.SetSpeed(4);
             }
-        }
+        }*/
 
         public void Start()
         {
             _bookControl = BookObject.GetComponent<IBookControl>();
+        }
+
+        public void Update()
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+
+                clickedGameObject = null;
+
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                RaycastHit hit = new RaycastHit();
+
+                if (Physics.Raycast(ray, out hit))
+                {
+                    clickedGameObject = hit.collider.gameObject;
+                }
+
+                if (clickedGameObject.CompareTag("right"))
+                {
+                    right();
+                }
+                else if (clickedGameObject.CompareTag("left"))
+                {
+                    left();
+                }
+            }
+        }
+
+        void right() {
+            if (nowPage == 0)
+            {
+                _bookControl.OpenBook();
+                page1.time = 0.0f;
+                page1.Play();
+                page3.Stop();
+                nowPage = 1;
+            }
+            else if(nowPage == 1)
+            {
+                _bookControl.TurnPage();
+                page3.time = 0.0f;
+                page3.Play();
+                page1.Stop();
+                nowPage = 2;
+            }
+        }
+
+        void left()
+        {
+            if (nowPage == 1)
+            {
+                _bookControl.CloseBook();
+                page1.Stop();
+                page3.Stop();
+                nowPage = 0;
+            }
+            else if (nowPage == 2)
+            {
+                _bookControl.TurnPageBack();
+                page1.time = 0.0f;
+                page1.Play();
+                page3.Stop();
+                nowPage = 1;
+            }
         }
     }
 }

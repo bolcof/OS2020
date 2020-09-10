@@ -1977,7 +1977,7 @@ PrefabInstance:
         type: 3}
       propertyPath: material
       value: 
-      objectReference: {fileID: 2100000, guid: 81d9cd330ac8f4ef69d7d5dad69ba00d, type: 2}
+      objectReference: {fileID: 2100000, guid: 94e584daa656949f3bafc9d4f11f5307, type: 2}
     - target: {fileID: 4545905182328949749, guid: d9f95ecd91e694bf5894623344c30787,
         type: 3}
       propertyPath: m_Enabled
@@ -2057,7 +2057,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e633a20421c47426aa04444234225b69, type: 2}
+      objectReference: {fileID: 2100000, guid: 94e584daa656949f3bafc9d4f11f5307, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d9f95ecd91e694bf5894623344c30787, type: 3}
 --- !u!4 &519936857 stripped
@@ -5119,7 +5119,7 @@ PrefabInstance:
     - target: {fileID: 8757512056281690716, guid: 66f97e24097f84c7998f5a07dbea8b21,
         type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 0.16
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8757512056281690716, guid: 66f97e24097f84c7998f5a07dbea8b21,
         type: 3}
@@ -5129,12 +5129,22 @@ PrefabInstance:
     - target: {fileID: 8757512056281690716, guid: 66f97e24097f84c7998f5a07dbea8b21,
         type: 3}
       propertyPath: InitialModule.startSize.minScalar
-      value: 0.08
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 8757512056281690716, guid: 66f97e24097f84c7998f5a07dbea8b21,
         type: 3}
       propertyPath: InitialModule.size3D
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757512056281690716, guid: 66f97e24097f84c7998f5a07dbea8b21,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 8.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8757512056281690716, guid: 66f97e24097f84c7998f5a07dbea8b21,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 25.4
       objectReference: {fileID: 0}
     - target: {fileID: 8757512056281690717, guid: 66f97e24097f84c7998f5a07dbea8b21,
         type: 3}

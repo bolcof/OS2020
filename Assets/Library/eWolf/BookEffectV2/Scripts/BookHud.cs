@@ -8,7 +8,7 @@ namespace eWolf.BookEffectV2
         public GameObject BookObject;
         private IBookControl _bookControl;
         GameObject clickedGameObject;
-        public int nowPage = 0;
+        public int nowPage;
         public AudioSource page1, page3;
 
  /*       public void OnGUI()
@@ -89,6 +89,11 @@ namespace eWolf.BookEffectV2
                     clickedGameObject = hit.collider.gameObject;
                 }
 
+                if (clickedGameObject != null)
+                {
+                    Debug.Log(clickedGameObject.name);
+                }
+                
                 if (clickedGameObject.CompareTag("right"))
                 {
                     right();

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class MovieUIBehaviour : MonoBehaviour
 {
-    public float triggerDistance, exitDistance;
+    public float triggerDistance, exitDistance, dist;
 
     public bool isPlaying, isReady, isBroken;
     public float playTime;
@@ -19,11 +19,12 @@ public class MovieUIBehaviour : MonoBehaviour
 
     public GameObject before, after;
 
-    
+    public float delay;
+    public float stayTime = 0.0f;
 
-        void Update()
+    void Update()
     {
-        float dist = Vector3.Distance(this.transform.position, PlayerObj.transform.position);
+        dist = Vector3.Distance(this.transform.position, PlayerObj.transform.position);
 
         if (dist > exitDistance && !isReady)
         {
@@ -35,17 +36,12 @@ public class MovieUIBehaviour : MonoBehaviour
         {
             if (dist < triggerDistance)
             {
-                Debug.Log("start");
-                Rimg.enabled = true;
-                closebtn.gameObject.SetActive(true);
-
-      
-                isPlaying = true;
-                isReady = false;
-                playTime = 0.0f;
-                VplayerObj.time = 0.0f;
-                VplayerObj.Play();
-                PlayerObj.GetComponent<MoveScript>().isActive = false;
+                stayTime += Time.deltaTime;
+                if(stayTime >= delay){
+                    startMovie();
+                }
+            }else{
+                stayTime = 0.0f;
             }
         }
         else
@@ -56,6 +52,17 @@ public class MovieUIBehaviour : MonoBehaviour
                 close();
             }
         }
+    }
+
+    public void startMovie(){
+        Rimg.enabled = true;
+        closebtn.gameObject.SetActive(true);
+        isPlaying = true;
+        isReady = false;
+        playTime = 0.0f;
+        VplayerObj.time = 0.0f;
+        VplayerObj.Play();
+        PlayerObj.GetComponent<MoveScript>().isActive = false;
     }
 
     public void close()

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641275, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -882,7 +882,6 @@ GameObject:
   - component: {fileID: 275210019}
   - component: {fileID: 275210018}
   - component: {fileID: 275210017}
-  - component: {fileID: 275210020}
   m_Layer: 0
   m_Name: Left
   m_TagString: left
@@ -904,8 +903,8 @@ Transform:
   m_Father: {fileID: 2053100928}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 78.586006, y: -31.076002, z: -32.929}
---- !u!64 &275210017
-MeshCollider:
+--- !u!65 &275210017
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -913,11 +912,10 @@ MeshCollider:
   m_GameObject: {fileID: 275210015}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10.000001, y: 2, z: 10}
+  m_Center: {x: 0.0000076293945, y: -0.000015258789, z: 0.000061035156}
 --- !u!23 &275210018
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -964,19 +962,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 275210015}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &275210020
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 275210015}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 5.0000005
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &286777732
 GameObject:
   m_ObjectHideFlags: 0
@@ -1007,7 +992,7 @@ Transform:
   m_GameObject: {fileID: 286777732}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0.00000028088027}
   m_LocalPosition: {x: 0, y: 0, z: 6}
-  m_LocalScale: {x: 3.5229, y: 20, z: 1.7614504}
+  m_LocalScale: {x: 0.05, y: 20, z: 1.7614504}
   m_Children: []
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
@@ -1161,7 +1146,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &340242591
@@ -4550,8 +4535,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d656a040ee86a55428a1bb4e47165cf3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDistance: 4.2
-  exitDistance: 15
+  triggerDistance: 12
+  exitDistance: 25
+  dist: 0
   isPlaying: 0
   isReady: 0
   isBroken: 0
@@ -4562,6 +4548,8 @@ MonoBehaviour:
   closebtn: {fileID: 810615545}
   before: {fileID: 274185986}
   after: {fileID: 1146095295}
+  delay: 3
+  stayTime: 0
 --- !u!1 &1475305995 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: ab33e6080ae416b4d899f39fa8951b98,
@@ -4797,7 +4785,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1555792468
@@ -6173,7 +6161,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1962839597
@@ -6492,7 +6480,7 @@ MeshCollider:
   m_GameObject: {fileID: 2042240274}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
@@ -6543,8 +6531,8 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2042240274}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!135 &2042240279
-SphereCollider:
+--- !u!65 &2042240279
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6552,10 +6540,10 @@ SphereCollider:
   m_GameObject: {fileID: 2042240274}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10, y: 2, z: 10.000001}
+  m_Center: {x: 0, y: 0.0000038146973, z: -0.000061035156}
 --- !u!1 &2053100927
 GameObject:
   m_ObjectHideFlags: 0
@@ -6565,7 +6553,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2053100928}
-  - component: {fileID: 2053100929}
   m_Layer: 0
   m_Name: Matsui
   m_TagString: Untagged
@@ -6592,20 +6579,6 @@ Transform:
   m_Father: {fileID: 259823782}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -45.417004, y: -81.086006, z: 76.240005}
---- !u!114 &2053100929
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2053100927}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47a1f054a35a81e4388fbdfabb35108b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bookRoot: {fileID: 61752263}
-  nowPage: 0
 --- !u!1 &2071746170
 GameObject:
   m_ObjectHideFlags: 0

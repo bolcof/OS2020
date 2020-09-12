@@ -60,7 +60,6 @@ public class MovieUIBehaviour : MonoBehaviour
         isPlaying = true;
         isReady = false;
         playTime = 0.0f;
-        VplayerObj.time = 0.0f;
         VplayerObj.Play();
         PlayerObj.GetComponent<MoveScript>().isActive = false;
     }

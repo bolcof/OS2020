@@ -2039,7 +2039,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e157d9c970ec45871c722d7ec96e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativePath: kasajima/kasajima.mp4
+  relativePath: kasajima/kasajima_keiryou.mp4
 --- !u!114 &395157282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4704,8 +4704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a116144f5f5c0214bbd4333a5c31972d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDistance: 74.5
-  ExitDistance: 84.1
+  triggerDistance: 44.29
+  ExitDistance: 61.2
   MaxDistance: 19.61
   MuteDistance: 72.4
   isPlaying: 0
@@ -4723,7 +4723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e157d9c970ec45871c722d7ec96e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativePath: jois/jois.mp4
+  relativePath: jois/jois_keiryou3.mp4
 --- !u!1001 &1005571542
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5179,7 +5179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e157d9c970ec45871c722d7ec96e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativePath: hayasi/hayasi.mp4
+  relativePath: hayasi/hayashi_keiryou3.mp4
 --- !u!328 &1058802092
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -5226,7 +5226,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a116144f5f5c0214bbd4333a5c31972d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerDistance: 42.1
+  triggerDistance: 33.2
   ExitDistance: 59.4
   MaxDistance: 8.62
   MuteDistance: 55.4
@@ -5412,7 +5412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e157d9c970ec45871c722d7ec96e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativePath: kasajima/kasajima.mp4
+  relativePath: kasajima/kasajima_keiryou.mp4
 --- !u!114 &1107607925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6614,7 +6614,7 @@ MonoBehaviour:
   closebtn: {fileID: 810615545}
   before: {fileID: 274185986}
   after: {fileID: 1146095295}
-  delay: 5
+  delay: 3.5
   stayTime: 0
 --- !u!114 &1406143217
 MonoBehaviour:
@@ -6628,7 +6628,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e157d9c970ec45871c722d7ec96e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativePath: nishimura/nishimura.mp4
+  relativePath: nishimura/nishimura_keiryou.mp4
 --- !u!328 &1406143218
 VideoPlayer:
   m_ObjectHideFlags: 0
@@ -7401,7 +7401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d4e157d9c970ec45871c722d7ec96e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  relativePath: nishimura/nishimura.mp4
+  relativePath: nishimura/nishimura_keiryou.mp4
 --- !u!1001 &1661925782
 PrefabInstance:
   m_ObjectHideFlags: 0

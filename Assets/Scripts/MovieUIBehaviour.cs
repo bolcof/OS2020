@@ -70,8 +70,8 @@ public class MovieUIBehaviour : MonoBehaviour
         Rimg.enabled = false;
         closebtn.gameObject.SetActive(false);
         isPlaying = false;
-        VplayerObj.Stop();
         VplayerObj.time = 0.0f;
+        VplayerObj.Stop();
         PlayerObj.GetComponent<MoveScript>().isActive = true;
         playTime = 0.0f;
 

@@ -47,6 +47,7 @@ public class MovieObjBehaviour : MonoBehaviour
             if (dist > ExitDistance)
             {
                 isPlaying = false;
+                this.gameObject.GetComponent<VideoPlayer>().time = 0.0f;
                 this.gameObject.GetComponent<VideoPlayer>().Stop();
                 inversed.Stop();
             }
